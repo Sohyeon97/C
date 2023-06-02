@@ -35,3 +35,35 @@ int main(void){
 ```
 
 ㄴ 오류 
+
+```
+# include <stdio.h>
+
+int main()
+{
+	int a,b,c,i;
+	int arr[10]={0,};
+	long sum=0;
+	
+	scanf("%d %d %d",&a,&b,&c);
+	
+	sum = a*b*c;
+    
+	while(1)
+	{
+		
+		arr[sum%10]+=1;
+		sum= sum/10;
+		if(sum == 0)
+			break;
+	}
+	
+	for(i = 0; i<10; i++)
+	{
+		printf("%d\n",arr[i]);
+	}
+	
+	return 0;
+}
+```
+<br> ㄴ 정답
